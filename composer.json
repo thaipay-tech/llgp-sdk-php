@@ -1,0 +1,19 @@
+{
+    "name": "llgp/llgp-sdk-php",
+    "description": "LianLian Global (Thailand) payment gateway php sdk.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Llgp\\LlgpSdkPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "liuxf003",
+            "email": "liuxf003@lianlianpay.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
