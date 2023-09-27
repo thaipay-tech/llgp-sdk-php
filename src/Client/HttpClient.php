@@ -2,8 +2,6 @@
 
 namespace Llgp\LlgpSdkPhp\Client;
 
-use Llgp\LlgpSdkPhp\Constants\LLPayConstant;
-
 class HttpClient
 {
     /**

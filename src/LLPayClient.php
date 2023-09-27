@@ -2,16 +2,10 @@
 
 namespace Llgp\LlgpSdkPhp;
 
-require './Client/HttpClient.php';
-require './Request/LLPayRequest.php';
-require './Response/LLPayResponse.php';
-require './Utils/SignUtil.php';
-require './Config/LLPayConfig.php';
-
 use Llgp\LlgpSdkPhp\Client\HttpClient;
+use Llgp\LlgpSdkPhp\Config\LLPayConfig;
 use Llgp\LlgpSdkPhp\Constants\LLPayConstant;
 use Llgp\LlgpSdkPhp\Request\LLPayRequest;
-use Llgp\LlgpSdkPhp\Config\LLPayConfig;
 use Llgp\LlgpSdkPhp\Utils\SignUtil;
 
 final class LLPayClient
