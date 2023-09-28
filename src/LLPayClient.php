@@ -35,19 +35,12 @@ final class LLPayClient
 
     public function execute(LLPayRequest $payRequest)
     {
-//        $validateResult = $payRequest->validate();
-//        if (!is_null($validateResult)) {
-//            $response = new LLPayResponse();
-//            $response->code = 400000;
-//            $response->message = $validateResult;
-//            return $response->toMap();
-//        }
         // add sign
         $signText = $this->signUtil->object_to_array($payRequest);
         $signature = $this->signUtil->sign($signText, $this->merchantPrivateKey);
         $header = array(
             'Content-Type: ' . LLPayConstant::CONTENT_TYPE,
-            'sign_type: ' . LLPayConstant::CONTENT_TYPE,
+            'sign_type: ' . LLPayConstant::SIGN_TYPE,
             'sign: ' . $signature
         );
 
@@ -59,8 +52,6 @@ final class LLPayClient
             $result = $this->httpClient->get(
                 $this->serverUrl. '?' . $this->signUtil->gen_sign_content($signText), $header);
         }
-
-//        $response = LLPayResponse::fromMap($result['body']);
 
         // process request result
         $response = $result['body'];
