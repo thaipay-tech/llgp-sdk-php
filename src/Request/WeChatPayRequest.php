@@ -16,12 +16,14 @@ class WeChatPayRequest implements LLPayRequest
 
     public $store_id;
     public $payment_method;
-    public $customer;
-    public $products;
     public $notify_url;
+    public $redirect_url;
     public $auth_code;
     public $appid;
     public $openid;
+    public $customer;
+    public $client;
+    public $products;
     
     public function httpMethod(): string
     {

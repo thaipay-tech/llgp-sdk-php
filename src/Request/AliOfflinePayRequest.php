@@ -13,6 +13,7 @@ class AliOfflinePayRequest implements LLPayRequest
     public $order_amount;
     public $order_currency;
     public $order_info;
+    public $store_id;
     public $payment_type;
     public $buyer_identity_code;
     public $notify_url;
