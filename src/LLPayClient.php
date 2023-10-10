@@ -66,7 +66,7 @@ final class LLPayClient
             $response['sign_verify'] = false;
             return $response;
         }
-        $check = $this->signUtil->verify($response, $lianLianSign, $this->lianLianPublicKey);
+        $check = $this->signUtil->verify($response['data'], $lianLianSign, $this->lianLianPublicKey);
         $response['sign_verify'] = $check;
         return $response;
     }
