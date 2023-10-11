@@ -13,8 +13,6 @@ class QRPromptPayResponse
 
     public $qr_code;
     public $qr_code_expire_sec;
-
-    public $link_url;
     public $create_time;
 
     public static function fromMap($map = []) {
@@ -42,9 +40,6 @@ class QRPromptPayResponse
         }
         if(isset($map['qr_code_expire_sec'])){
             $model->qr_code_expire_sec = $map['qr_code_expire_sec'];
-        }
-        if(isset($map['link_url'])){
-            $model->link_url = $map['link_url'];
         }
         if(isset($map['create_time'])){
             $model->create_time = $map['create_time'];
